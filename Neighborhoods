@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	     Scanner scanner = new Scanner(System.in);
+		 String townpart = scanner.nextLine(); 
+		 
+		 if (townpart.equals("Asenov")){
+		     System.out.print("Population:850");
+		 } else if (townpart.equals("Varusha")){
+		     System.out.print("Population:1100");
+		 } else if (townpart.equals("Sveta gora")){
+		     System.out.print("Population:1000");
+		 } else if (townpart.equals("Tsentar")){
+		     System.out.print("Population:4000");
+		 } else if (townpart.equals("Shirok tsentar")){
+		     System.out.print("Population:5000");
+		 } else if (townpart.equals("Akacia")){
+		     System.out.print("Population:4500");
+		 } else if (townpart.equals("Kartala")){
+		     System.out.print("Population:9000");
+		 } else if (townpart.equals("Cholakovtsi")){
+		     System.out.print("Population:4300");
+		 } else if (townpart.equals("Kolyu Ficheto")){
+		     System.out.print("Population:10000");
+		 } else if (townpart.equals("Buzludha")){
+		     System.out.print("Population:15000");      
+		 }  
+	}
+}
