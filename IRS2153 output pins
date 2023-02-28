@@ -1,0 +1,37 @@
+import java.util.Scanner;
+ 
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+ 
+       String pin = scanner.nextLine();
+        
+        switch (pin) {
+            case "1":
+                System.out.print("VCC");
+                break;
+            case "2":
+                System.out.print("RT");
+                break;
+            case "3":
+                System.out.print("CT");
+                break;
+            case "4":
+                System.out.print("COM");
+                break;
+            case "5":
+                System.out.print("VB");
+                break;
+            case "6":
+                System.out.print("HO");
+                break;  
+            case "7":
+                System.out.print("VS");
+                break; 
+            case "8":
+                System.out.print("LO");
+                break;    
+        }
+        
+    }
+}
