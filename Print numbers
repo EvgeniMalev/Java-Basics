@@ -1,0 +1,17 @@
+import java.util.Scanner;
+ 
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+ 
+        System.out.println("Write a start number");
+        int valuestart = Integer.parseInt(scanner.nextLine());
+        System.out.println("Write an end number");
+        int valueend = Integer.parseInt(scanner.nextLine());
+        int i = 0;
+        
+		for (i = valuestart; i < valueend; i++){
+		  System.out.print(i + " ");
+		}
+    }
+}
