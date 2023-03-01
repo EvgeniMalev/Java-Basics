@@ -1,0 +1,20 @@
+import java.util.Scanner;
+ 
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+ 
+        System.out.println("Write Your name");
+        String name = scanner.nextLine(); 
+        System.out.println("Write Your gender");
+        String gender = scanner.nextLine(); 
+        System.out.println("Write Your hometown");
+        String hometown = scanner.nextLine(); 
+
+       if (gender.equals("M")) {
+		  System.out.printf("His name is %s, born in %s", name,  hometown);
+		 } else if (gender.equals("F")){
+		  System.out.printf("Her name is %s, born in %s", name,  hometown);   
+		 } 
+    }
+}
