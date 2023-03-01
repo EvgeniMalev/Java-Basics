@@ -1,0 +1,29 @@
+import java.util.Scanner;
+ 
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+ 
+        System.out.println("Write Your currency");
+        String currency = scanner.nextLine(); 
+        Double value = Double.parseDouble(scanner.nextLine());
+        double convertedvalue = 0;
+		
+         if (currency.equals("EUR")){
+		     convertedvalue = 0.51*value;
+          System.out.println(convertedvalue);  
+		 }else if(currency.equals("GBP")){
+		     convertedvalue = 0.45*value;
+          System.out.println(convertedvalue); 
+		 }else if(currency.equals("NZD")){
+		     convertedvalue = 0.87*value;
+          System.out.println(convertedvalue); 
+		 }else if(currency.equals("SGD")){
+		     convertedvalue = 0.73*value;
+          System.out.println(convertedvalue); 
+		 }else if(currency.equals("USD")){
+		     convertedvalue = 0.54*value;
+          System.out.println(convertedvalue); 
+		 }
+    }
+}
