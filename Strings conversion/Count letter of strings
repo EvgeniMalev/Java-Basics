@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // put Number of Strings which You will write
+        int NumberStrings = Integer.parseInt(scanner.nextLine());
+
+        int count = 0;
+        
+        // for cycle for the Strings
+        for (int i = 1; i <= NumberStrings; i++) {
+            
+            // Scan the string in a new line
+            String str =scanner.nextLine();
+            
+            // count the characters in each line
+            for(int j = 0; j < str.length(); j++) {  
+            if(str.charAt(j) != ' ')  
+                count++; 
+            }    
+        }
+        
+        System.out.println(count);
+
+    }
+}
