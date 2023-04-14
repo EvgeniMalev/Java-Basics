@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        
+       
+       
+  
+        String[] line1 = new String[];
+        String[] line2 = new String[];
+
+
+        
+            String[] array = scanner.nextLine().split(" ");
+            
+             for (int i = 0; i < array.length; i++) {
+            String firstElement = array[i];
+            
+           
+            if (i % 2 == 0){
+                line2[i] = array[i];
+                
+            } else {
+                 line1[i] = array[i];
+            }
+        }    
+        
+        System.out.println(String.join(" ", line1));
+        System.out.println(String.join(" ", line2));
+    }
+}
