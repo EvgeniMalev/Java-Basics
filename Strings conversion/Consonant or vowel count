@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+
+public static void main(String[] args) {
+    // Set a counter for the two types of letters
+   
+         int vowel = 0;
+         int co = 0;
+         
+      System.out.println("Enter a sentence :");
+      Scanner sc = new Scanner(System.in);
+      
+      // Scan the sentence
+      String sentence = sc.nextLine();
+
+      // Algorythm to check the size of the sentence
+      for (int i=0 ; i<sentence.length(); i++){
+         char ch = sentence.charAt(i);
+         
+         // Check is the letter vowel or consonant
+         if(ch == 'a'|| ch == 'e'|| ch == 'i' ||ch == 'o' ||ch == 'u'){
+            vowel ++;
+         } else if (ch == 'z'|| ch == 'x'|| ch == 'c' ||ch == 'v' ||ch == 'b'||ch == 'n'){    
+             co++;
+         } 
+          
+      }  
+            
+            System.out.printf("Number of vowels: " + vowel + " Number of consonant " + co);
+          
+            }
+}
