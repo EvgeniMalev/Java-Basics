@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        do {
+            System.out.print("Enter a word: ");
+            String input = scanner.nextLine();
+
+            // Check if the input word is "Tomato" (case-insensitive)
+            if (input.equals("Tomato")) {
+                System.out.println("Welldone you guess the vegetable!");
+                break;
+            }
+
+            // Process the input word
+            System.out.println("No: " + input);
+        } while (true);
+
+        scanner.close();
+    }
+}
