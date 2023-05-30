@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Pleace enter an encoding system for analogue television: ");
+        String manufacturer = scanner.nextLine();
+
+        if (manufacturer.equalsIgnoreCase("PAL")) {
+            System.out.println("PAL was broadcast at 625 lines, 50 fields (25 frames) per second,.");
+        } else if (manufacturer.equalsIgnoreCase("NTSC")) {
+            System.out.println("NTSC with 480 and 487 having 30 or 29.97 frames per second rate.");
+        } else if (manufacturer.equalsIgnoreCase("SECAM")) {
+            System.out.println("SECAM is used in France, some parts of Europe and Africa, and Russia.");
+        } else if (manufacturer.equalsIgnoreCase("Clear-Vision")) {
+            System.out.println("Clear-Vision is a Japanese EDTV.");
+        } else {
+            System.out.println("Unknown encoding system.");
+        }
+    }
+}
