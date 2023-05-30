@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class ASCIIsymbol {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        for (int i = 0; i < number; i++) {
+        // Ensure the number is within the range 1-26
+        if (number >= 1 && number <= 26) {
+            // Calculate the ASCII value of the first letter ('A') and adjust it based on the input number
+            int asciiValue = 'A' + i - 1;
+            char letter = (char) asciiValue;
+            
+            System.out.println("Letter: " + letter);
+            }
+        } 
+    }
+}
