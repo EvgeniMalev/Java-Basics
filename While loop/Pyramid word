@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Pyramidword {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a word: ");
+        String word = scanner.nextLine();
+
+        int lettersPerRow = 1; // Start with one letter per row
+        int currentIndex = 0; // Track the current index in the word
+
+        // Condition to print the word
+        while (currentIndex < word.length()) {
+        
+        // Set an index and use mathmin method to start with one letter and another one in each new row
+            int endIndex = Math.min(currentIndex + lettersPerRow, word.length());   
+            String row = word.substring(currentIndex, endIndex);
+            // Check if the letters are less than the privious String
+            if (row.length() > 1) {
+                System.out.println(row);
+            }
+            currentIndex += lettersPerRow; // Move to the next set of letters
+            lettersPerRow++; // Increase the number of letters per row for the next iteration
+        }
+    }
+}
