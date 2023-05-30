@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class Basicboolean {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String logic = scanner.nextLine();
+
+        int x, y, z;
+        boolean oneinput;
+
+        switch (logic) {
+            case "BUFFER":
+                x = scanner.nextInt();
+                oneinput = true;
+                System.out.println(x);
+                break;
+            case "NOT":
+                x = scanner.nextInt();
+                oneinput = true;
+                System.out.println("-" + x);
+                break;
+            case "AND":
+                x = scanner.nextInt();
+                y = scanner.nextInt();
+                z = 0;
+                oneinput = false;
+                if ((x == 0) && (y == 0)) {
+                    z = 0;
+                } else if ((x == 0) && (y == 1)) {
+                    z = 0;
+                } else if ((x == 1) && (y == 0)) {
+                    z = 0;
+                } else if ((x == 1) && (y == 1)) {
+                    z = 1;
+                }
+                System.out.println(z);
+                break;
+            case "OR":
+                x = scanner.nextInt();
+                y = scanner.nextInt();
+                z = 0;
+                oneinput = false;
+                if ((x == 0) && (y == 0)) {
+                    z = 0;
+                } else if ((x == 0) && (y == 1)) {
+                    z = 1;
+                } else if ((x == 1) && (y == 0)) {
+                    z = 1;
+                } else if ((x == 1) && (y == 1)) {
+                    z = 1;
+                }
+                System.out.println(z);
+                break;
+            default:
+                System.out.println("Invalid command");
+                break;
+        }
+
+        scanner.close();
+    }
+}
