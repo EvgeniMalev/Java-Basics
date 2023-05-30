@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Reverceword {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a word: ");
+        String word = scanner.nextLine();
+
+        word = reverseString(word); // Step 1: Reverse the input word
+
+        int lettersPerRow = word.length(); // Start with the full word on the first row
+        int currentIndex = 0; // Track the current index in the word
+
+        // Condition to print the word
+        while (currentIndex < word.length()) {
+            // Set an index and use Math.min method to adjust the substring length
+            int endIndex = Math.min(currentIndex + lettersPerRow, word.length());
+            String row = word.substring(currentIndex, endIndex);
+            System.out.println(row);
+
+            currentIndex += lettersPerRow; // Move to the next set of letters
+            lettersPerRow--; // Decrease the number of letters per row for the next iteration
+        }
+    }
+
+    // Helper method to reverse a string
+    private static String reverseString(String str) {
+        StringBuilder sb = new StringBuilder(str);
+        return sb.reverse().toString();
+    }
+}
