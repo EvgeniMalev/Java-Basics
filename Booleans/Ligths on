@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+            String switch1 = scanner.nextLine();
+            String switch2 = scanner.nextLine();
+            String switch3 = scanner.nextLine();
+            
+            // Check if all switches are turned on
+            if ((switch1.equals("ON")) && (switch2.equals("ON")) && (switch3.equals("ON"))) {
+                // write a boolean statement 
+                boolean ligthson = true;
+                System.out.println("All ligths are on!");
+            } else {
+                boolean ligthson = false;
+            System.out.println("Not enaugth ligth in the house");
+            }
+
+        scanner.close();
+    }
+}
