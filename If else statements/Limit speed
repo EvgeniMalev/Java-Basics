@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class LimitSpeed {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your movement speed: ");
+        int speed = scanner.nextInt();
+
+        if (speed >= 50) {
+            System.out.println("You are not allowed to drive with this speed in the town.");
+        } else {
+            System.out.println("You can drive, but pleace drive safe.");
+            int kmleft = 50 - speed;
+            System.out.println( kmleft + " remain until the limit!");
+        }
+    }
+}
