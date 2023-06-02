@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Guessresult {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // First expression with AND operator
+        System.out.println("Guess the output of the expression (0 AND 1):");
+        int input1 = 0;
+        int input2 = 1;
+        boolean expectedOutputAND = input1 == 1 && input2 == 1;
+        int userGuessAND = scanner.nextInt();
+        boolean isCorrectAND = expectedOutputAND == (userGuessAND == 1);
+        System.out.println("Your guess for (0 AND 1) is " + isCorrectAND);
+
+        // Second expression with OR operator
+        System.out.println("Guess the output of the expression (0 OR 1):");
+        boolean expectedOutputOR = input1 == 1 || input2 == 1;
+        int userGuessOR = scanner.nextInt();
+        boolean isCorrectOR = expectedOutputOR == (userGuessOR == 1);
+        System.out.println("Your guess for (0 OR 1) is " + isCorrectOR);
+        
+        // Third expression with NOT operator
+        System.out.println("Guess the output of the expression (0 NOT):");
+        boolean expectedOutputNOT = input1 == 0;
+        int userGuessNOT = scanner.nextInt();
+        boolean isCorrectNOT = expectedOutputNOT == (userGuessNOT == 1);
+        System.out.println("Your guess for (0 OR 1) is " + isCorrectNOT);
+    }
+}
