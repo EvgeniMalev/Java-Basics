@@ -1,0 +1,10 @@
+public class Main {
+    public static void main(String[] args) {
+        String booleanString = "true"; // Replace with your boolean string
+        
+        int result = booleanString.equalsIgnoreCase("true") ? 1 : 0;
+        
+        System.out.println("Boolean String: " + booleanString);
+        System.out.println("Integer representation: " + result);
+    }
+}
