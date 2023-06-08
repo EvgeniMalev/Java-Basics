@@ -1,0 +1,25 @@
+
+public class Main {
+    public static void main(String[] args) {
+        // First while loop
+        int i = 1;
+        while (i <= 5) {
+            System.out.println("First loop iteration: " + i);
+            i++;
+        }
+
+        // Second while loop
+        int j = 10;
+        while (j >= 6) {
+            System.out.println("Second loop iteration: " + j);
+            j--;
+        }
+        
+        7// Third while loop
+        int k = 30;
+        while (k <= 50) {
+            System.out.println("Third loop iteration: " + k);
+            k++;
+        }
+    }
+}
