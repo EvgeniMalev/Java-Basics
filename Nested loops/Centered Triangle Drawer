@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class CenteredTriangleDrawer {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter an integer (n): ");
+        int n = scanner.nextInt();
+
+        if (n < 2) {
+            System.out.println("Please enter a positive integer greater than or equal to 2.");
+        } else {
+            drawCenteredTriangle(n);
+        }
+    }
+
+    public static void drawCenteredTriangle(int n) {
+        int half = n / 2;
+        if (n % 2 == 0) {
+            // Adjust the half if n is even to maintain symmetry
+            half--;
+        }
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                // Check if the current position is part of the triangle or not
+                if (j >= half - i && j <= half + i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print("-");
+                }
+
+                // Add a space for formatting
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+}
