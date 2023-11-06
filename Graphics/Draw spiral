@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Drawspiral {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the number of revolutions: ");
+        int n = Integer.parseInt(scanner.nextLine());
+        drawSpiral(n);
+    }
+
+    public static void drawSpiral(int revolutions) {
+        int width = 50;
+        int height = 50;
+        char[][] grid = new char[height][width];
+
+        int centerX = width / 2;
+        int centerY = height / 2;
+        int x = centerX;
+        int y = centerY;
+
+        for (int i = 0; i < revolutions * 360; i++) {
+            double angle = Math.toRadians(i / 360.0); // Convert to radians and divide by 360
+            x = (int) (centerX + (i * Math.cos(angle) / 30));
+            y = (int) (centerY + (i * Math.sin(angle) / 30));
+
+            if (x >= 0 && x < width && y >= 0 && y < height) {
+                grid[y][x] = 'o';
+            }
+        }
+
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                System.out.print(grid[i][j] == 'o' ? 'o' : ' ');
+            }
+            System.out.println();
+        }
+    }
+}
