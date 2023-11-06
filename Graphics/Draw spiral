@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class Drawspiral {
+
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.print("Enter the number of revolutions: ");
-        int n = Integer.parseInt(scanner.nextLine());
+        int n = Integer.parseInt(scanner.nextLine()); // Number of revolutions
         drawSpiral(n);
     }
 
@@ -20,9 +20,9 @@ public class Drawspiral {
         int y = centerY;
 
         for (int i = 0; i < revolutions * 360; i++) {
-            double angle = Math.toRadians(i / 360.0); // Convert to radians and divide by 360
-            x = (int) (centerX + (i * Math.cos(angle) / 30));
-            y = (int) (centerY + (i * Math.sin(angle) / 30));
+            double angle = Math.toRadians(i);
+            x = (int) (centerX + (i * Math.cos(angle) / 10));
+            y = (int) (centerY + (i * Math.sin(angle) / 10));
 
             if (x >= 0 && x < width && y >= 0 && y < height) {
                 grid[y][x] = 'o';
