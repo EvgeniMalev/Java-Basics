@@ -1,0 +1,25 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class CalcCapacitor {
+    public static void main(String[] args) throws IOException {
+        final double eps = 0.000000000085; // Use double for floating-point numbers
+        double c; // Use double for capacitance
+        double a;
+        double d;
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.print("Enter the value of a: ");
+        a = Double.parseDouble(reader.readLine());
+
+        System.out.print("Enter the value of d: ");
+        d = Double.parseDouble(reader.readLine());
+
+        // Formula for capacitance: C = ε * (a / d)
+        c = eps * (a / d);
+
+        System.out.println("The capacitance is: " + c);
+    }
+}
