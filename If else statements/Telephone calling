@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("How are You today?");
+        
+        int s = Integer.parseInt(scanner.nextLine());
+
+        if (s == 1) {
+            System.out.print("I am good.");
+        } else if (s == 2) {
+            System.out.print("So - so");
+        } else if (s == 3) {
+            System.out.print("Not good");
+        } else {
+            System.out.print("Invalid input");
+        }
+        
+        System.out.print("From where are You?");
+        
+        int p = Integer.parseInt(scanner.nextLine());
+
+        if (p == 1) {
+            System.out.print("Bulgaria.");
+        } else if (p == 2) {
+            System.out.print("Russia");
+        } else if (p == 3) {
+            System.out.print("Somewhere else");
+        } else {
+            System.out.print("Invalid input");
+        }
+        
+       System.out.print("What is Your education?");
+        
+        int v = Integer.parseInt(scanner.nextLine());
+
+        if (v == 1) {
+            System.out.print("High school");
+        } else if (v == 2) {
+            System.out.print("BCs");
+        } else if (v == 3) {
+            System.out.print("MCs");
+        } else if (v == 4) {
+            System.out.print("PhD");    
+        } else {
+            System.out.print("Invalid input");
+        }
+        
+    }
+}
