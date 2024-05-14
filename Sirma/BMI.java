@@ -7,7 +7,7 @@ public class Main {
         double weight = scanner.nextDouble();
         double height = scanner.nextDouble();
 
-        double BMI = weight / height; 
+        double BMI = weight /(height * height);
     
         System.out.printf("The BMI is = %.2f\n", BMI);
     }
