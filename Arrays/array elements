@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void sumFirstAndLast(String[] array) {
+        if (array.length == 0) {
+            System.out.println("The array is empty.");
+            return;
+        }
+
+        int firstElement = Integer.parseInt(array[0]);
+        int lastElement = Integer.parseInt(array[array.length - 1]);
+        int sum = firstElement + lastElement;
+        System.out.println(sum);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the elements of the array separated by commas:");
+        String input = scanner.nextLine();
+
+        String[] array = input.split(",");
+        sumFirstAndLast(array);
+
+        scanner.close();
+    }
+}
+
